@@ -1,0 +1,92 @@
+.w-100{
+    width: 100%;
+}
+.personalized-trip-container{
+    display: flex;
+    padding: 3rem 7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.personalized-trip-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-title-desc{
+    display: flex;
+    width: 76rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.main-header{
+    color: var(--greyscale-title, #000C07);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+.header-detail{
+    color: var(--greyscale-label, #666E6B);
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.personalized-trip-list{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+.personalized-trip-column{
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    gap: 1rem;
+
+}
+
+.h-50{
+    height: 44vh;
+}
+
+
+/*advanced acrd custom styling*/
+.small-cat-text{
+    font-size: 0.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%; 
+    letter-spacing: 2px;
+}
+.small-title{
+   font-size: 1.25rem;
+   font-family: Poppins;
+   font-style: normal;
+   font-weight: 700;
+   line-height: 130%;  
+}
+.small-desc{
+    font-size: 0.625rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;    
+}

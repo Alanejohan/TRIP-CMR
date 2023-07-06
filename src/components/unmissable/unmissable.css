@@ -1,0 +1,83 @@
+.w-100{
+    width: 100%;
+}
+.unmissable-container{
+    display: flex;
+    padding: 3rem 7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.unmissable-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+}
+
+.main-title-desc{
+    display: flex;
+    width: 76rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+.main-header{
+    color: var(--greyscale-title, #000C07);
+    text-align: center;
+    font-size: 3.5rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+.header-detail{
+    color: var(--greyscale-label, #666E6B);
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.unmissable-list{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+
+}
+
+
+/*styles aplied to advanced card component*/
+.unm-desc{
+    color: var(--greyscale-label, #666E6B);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.unm-title{
+    color: var(--greyscale-label, #666E6B);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.unm-cat{
+    text-align: center;
+}
+
+.unm-card{
+    padding: 14rem 2rem 2rem 2rem !important;
+}

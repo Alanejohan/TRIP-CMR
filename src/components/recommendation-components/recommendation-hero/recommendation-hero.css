@@ -1,0 +1,51 @@
+.recommendation-container{
+    display: flex;
+    padding: 2rem 7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.recommendation-img-container{
+    display: flex;
+    height: 80vh;
+    border-radius: 1.5rem;
+    background-image: url("/public/assets/images/hero-recommendation.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.hero-text-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 50%;
+    padding-left: 4rem;
+}
+.recommendation-hero-desc{
+    color: white;
+    font-size: 0.875rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin: 0px;
+    padding: 0px;
+}
+
+.recommendation-hero-header{
+    color: white;
+    font-size: 4rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 0.32rem;
+    text-transform: capitalize;
+    margin: 0px;
+    padding: 0px;
+}

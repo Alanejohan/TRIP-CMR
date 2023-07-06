@@ -1,12 +1,22 @@
-import './navbar.css'
+import './login.css'
 import { Link } from 'react-router-dom'
 import SecondaryButton from '../buttons/secondary-button'
 import PrimaryButton from '../buttons/primary-button'
 
-const Navbar = () => {
+const Login = () => {
     return(
-        <div className='navbar'>
-            <div className="nav-container">
+        <div className='login-container'>
+            <div className="nav-content">
+                <div className="input-logo">
+                    <div className="logo">
+                        <Link to={'/'}>
+                            <img src="assets/logo/logo.svg" alt="images in react"/>
+                        </Link>
+                    </div>
+                    <div className="input-container">
+                        
+                    </div>
+                </div>
                 <div className="logo">
                     <Link to={'/'}>
                         <img src="assets/logo/logo.svg" alt="images in react"/>
@@ -41,4 +51,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar
+export default Login

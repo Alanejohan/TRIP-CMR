@@ -1,7 +1,9 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
-import Recommendation from './pages/recommendation/top recommendations';
+import CategoryDetail from './pages/category/categories';
+import TopRecommendation from './pages/top-recommendation/top-recommendations';
+
 //import logo from "./logo192.png"
 
 
@@ -11,7 +13,8 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Home/>}/>
-        <Route path="/top-recommendation" element={<Recommendation/>}/>
+        <Route path="/top-recommendation" element={<TopRecommendation/>}/>
+        <Route path="/category" element={<CategoryDetail/>}/>
       </Routes>
     </BrowserRouter>
   )

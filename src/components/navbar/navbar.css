@@ -32,3 +32,9 @@
     align-items: flex-start;
     gap: 0.25rem;
 }
+
+.header-link{
+    text-decoration: none;
+    color: #000;
+    
+}

@@ -1,0 +1,93 @@
+.category-recommendation-container{
+    display: flex;
+    padding: 3rem 7rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.category-recommendation-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    width: 100%;
+}
+
+.main-title-desc{
+    display: flex;
+    width: 76rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+.main-header{
+    color: var(--greyscale-title, #000C07);
+    text-align: center;
+    font-size: 3rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+.header-detail{
+    color: var(--greyscale-label, #666E6B);
+    text-align: center;
+    font-size: 0.875rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+}
+
+.category-recommendation-list{
+    display: flex;
+    align-items: flex-start;
+    row-gap: 3rem;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+
+/*styles aplied to simple card component*/
+.w-50{
+    width: 50%;
+}
+
+.h-70{
+    height: 90vh;
+}
+
+.w-23{
+    width: 23%;
+}
+.unm-desc{
+    color: var(--greyscale-label, #666E6B);
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
+}
+
+.unm-title{
+    color: var(--greyscale-label, #666E6B);
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+.unm-cat{
+    text-align: center;
+}
+
+.unm-card{
+    padding: 14rem 2rem 2rem 2rem !important;
+}

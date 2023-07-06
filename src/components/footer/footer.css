@@ -1,0 +1,124 @@
+.footer{
+    display: flex;
+    padding: 2rem 7rem;
+    background: #FFF;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.footer-item-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.footer-logo-desc{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+    width: 20%;
+}
+
+.footer-desc{
+    color: var(--greyscale-label, #666E6B);
+    font-size: 0.75rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.footer-menu-column{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.footer-menu-item-container{
+    list-style-type: none;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    justify-content: space-between;
+    margin: 0px;
+    padding: 0px;
+}
+
+.footer-menu-title{
+    color: #000;
+    font-size: 1rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    
+}
+
+.footer-link{
+    text-decoration: none;
+}
+
+.footer-menu-item{
+    color: #000;
+    font-size: 1rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.newsletter{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem; 
+}
+
+.inputfield-cta{
+    display: flex;
+    gap: 1rem;
+}
+
+.footer-input-custom{
+    padding: 0.5rem 1rem 0.5rem 0.9375rem;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-hr{
+    width: 100%;
+    color: grey;
+}
+
+.copyrights{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 100%;
+}
+
+.company-name{
+    color: var(--greyscale-label, #666E6B);
+    font-size: 0.75rem;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.rights{
+    color: #8A8A8A;
+    font-size: 1rem;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
