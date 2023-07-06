@@ -1,7 +1,7 @@
 import './login.css'
 import { Link } from 'react-router-dom'
-import SecondaryButton from '../buttons/secondary-button'
-import PrimaryButton from '../buttons/primary-button'
+import SecondaryButton from '../../../components/buttons/secondary-button'
+import PrimaryButton from '../../../components/buttons/primary-button'
 
 const Login = () => {
     return(

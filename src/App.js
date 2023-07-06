@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages/home/Home';
 import CategoryDetail from './pages/category/categories';
 import TopRecommendation from './pages/top-recommendation/top-recommendations';
+import Login from './pages/auth/signin-page/login';
 
 //import logo from "./logo192.png"
 
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home/>}/>
         <Route path="/top-recommendation" element={<TopRecommendation/>}/>
         <Route path="/category" element={<CategoryDetail/>}/>
+        <Route path='/login' element={<Login/>}/>
       </Routes>
     </BrowserRouter>
   )
