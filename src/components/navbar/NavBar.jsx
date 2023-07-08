@@ -30,7 +30,7 @@ const Navbar = () => {
                 </div>
                 <div className="cta">
                     <Link to={'/login'}>
-                        <SecondaryButton label="Login"/>
+                        <SecondaryButton  label="Login"/>
                     </Link>
                     <Link >
                         <PrimaryButton label="Search"/>

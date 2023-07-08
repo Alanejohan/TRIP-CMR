@@ -1,24 +1,20 @@
-.login-container {
-    width: 100vw;
-    height: 100vh;
-}
-
-.login-content {
+.preference-content {
     display: flex;
     padding: 2rem;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.input-content {
+.preference-input-content {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16vh;
+    gap: 12vh;
     width: 49%
 }
 
-.input-content .logo {
+
+.preference-input-content .logo {
     display: flex;
     padding: 0.5rem;
     flex-direction: column;
@@ -26,24 +22,26 @@
     width: 100%;
 }
 
-.login-input-container {
-    display: inline-flex;
+.preference-input-container {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.6875rem;
+    width: 22.5rem;
+
 }
 
 .auth-text {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
-.auth-title {
+.preference-auth-title {
     color: #1C1C1C;
     font-family: Inter;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-style: normal;
     font-weight: 800;
     line-height: normal;
@@ -53,10 +51,10 @@
     text-align: left;
 }
 
-.auth-description {
+.preference-auth-description {
     color: #545454;
     font-family: Inter;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -64,52 +62,48 @@
     padding: 0px;
 }
 
-.input-field-cta {
+.inputpreferences {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
+    width: 100%;
 }
 
-.email-field,
-.password-field {
+.preference-list {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-}
-
-.auth-label {
-    color: #000;
-    font-family: Inter;
-    font-size: 0.875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-}
-
-.auth-field {
-    display: flex;
-    width: 22.5rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    border: 1.5px solid var(--camsol-neutral-200, #C5C5C5);
-    background: var(--camsol-black-and-white-white, #FFF);
     align-items: center;
-    gap: 0.625rem;
+    gap: 1rem;
+    width: 100%;
+    height: 55vh;
+    overflow: hidden;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    padding-right: 6px;
+    
+
 }
 
-.remember-me {
+
+.preference-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.preference-list::-webkit-scrollbar-track {
+    background-color: #F3F8FE;
+    border-radius: 4px;
+}
+
+.preference-list::-webkit-scrollbar-thumb {
+    background-color: #B0D1F8;
+    border-radius: 4px;
+}
+
+.preference-row {
     display: flex;
     width: 100%;
-    align-items: flex-start;
-    align-content: center;
-
-}
-
-.check-box {
-    margin: 0px;
-    padding: 0px;
+    justify-content: space-between;
 }
 
 .auth-buttons {
@@ -152,7 +146,7 @@
 
 .auth-image-container {
     display: flex;
-    height: 100%;
+    height: 1;
     border-radius: 2rem;
     flex-direction: column;
     justify-content: flex-end;
@@ -164,29 +158,7 @@
     overflow: hidden;
     border-radius: 2rem;
     background-image: url("/public/assets/images/auth-image.png");
-    
-}
 
-@media screen and (min-width: 1450px) {
-    .auth-image-container {
-        display: flex;
-        height: 100%;
-        border-radius: 2rem;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        width: 90%;
-        overflow: hidden;
-        border-radius: 2rem;
-        background-image: url("/public/assets/images/auth-image.png");
-        
-    } 
-    .input-content {
-        gap: 24vh;
-    }
 }
 
 .auth-img-text {
@@ -205,4 +177,37 @@
 .auth-img-text p {
     text-align: center;
     color: white;
+}
+
+
+
+@media screen and (min-width: 1450px) {
+    .auth-image-container {
+        display: flex;
+        height: 100%;
+        border-radius: 2rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 2rem;
+        background-image: url("/public/assets/images/auth-image.png");
+
+    }
+
+    .preference-container {
+        width: 100%;
+    }
+
+    .preference-input-content {
+        gap: 18vh;
+    }
+
+    .image-container {
+        height: 120vh;
+    }
 }

@@ -1,9 +1,10 @@
-.login-container {
+.register-container {
     width: 100vw;
     height: 100vh;
 }
 
-.login-content {
+
+.register-content {
     display: flex;
     padding: 2rem;
     justify-content: space-between;
@@ -14,9 +15,10 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 16vh;
+    gap: 12vh;
     width: 49%
 }
+
 
 .input-content .logo {
     display: flex;
@@ -26,7 +28,7 @@
     width: 100%;
 }
 
-.login-input-container {
+.register-input-container {
     display: inline-flex;
     flex-direction: column;
     align-items: flex-start;
@@ -37,7 +39,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .auth-title {
@@ -50,13 +52,13 @@
     letter-spacing: 0.2rem;
     margin: 0px;
     padding: 0px;
-    text-align: left;
+    text-align: center;
 }
 
 .auth-description {
     color: #545454;
     font-family: Inter;
-    font-size: 1.125rem;
+    font-size: 1rem;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
@@ -72,7 +74,9 @@
 }
 
 .email-field,
-.password-field {
+.password-field,
+.name-field,
+.confirm-password-field {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -152,7 +156,7 @@
 
 .auth-image-container {
     display: flex;
-    height: 100%;
+    height: 1;
     border-radius: 2rem;
     flex-direction: column;
     justify-content: flex-end;
@@ -167,27 +171,7 @@
     
 }
 
-@media screen and (min-width: 1450px) {
-    .auth-image-container {
-        display: flex;
-        height: 100%;
-        border-radius: 2rem;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-items: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: bottom;
-        width: 90%;
-        overflow: hidden;
-        border-radius: 2rem;
-        background-image: url("/public/assets/images/auth-image.png");
-        
-    } 
-    .input-content {
-        gap: 24vh;
-    }
-}
+
 
 .auth-img-text {
     display: flex;
@@ -205,4 +189,34 @@
 .auth-img-text p {
     text-align: center;
     color: white;
+}
+
+
+
+@media screen and (min-width: 1450px) {
+    .auth-image-container {
+        display: flex;
+        height: 100%;
+        border-radius: 2rem;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+        width: 100%;
+        overflow: hidden;
+        border-radius: 2rem;
+        background-image: url("/public/assets/images/auth-image.png");
+        
+    } 
+    .register-container {
+        width: 100%;
+    }
+    .input-content {
+        gap: 1vh;
+    }
+    .image-container{
+        height: 120vh;
+    }
 }

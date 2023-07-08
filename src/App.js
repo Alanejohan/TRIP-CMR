@@ -4,6 +4,9 @@ import Home from './pages/home/Home';
 import CategoryDetail from './pages/category/categories';
 import TopRecommendation from './pages/top-recommendation/top-recommendations';
 import Login from './pages/auth/signin-page/login';
+import Register from './pages/auth/signup-page/register';
+import Preference from './pages/auth/preference-page/preference';
+import SuccessAuth from './pages/auth/success-page/sucess-auth';
 
 //import logo from "./logo192.png"
 
@@ -17,6 +20,9 @@ function App() {
         <Route path="/top-recommendation" element={<TopRecommendation/>}/>
         <Route path="/category" element={<CategoryDetail/>}/>
         <Route path='/login' element={<Login/>}/>
+        <Route path='/register' element={<Register/>}/>
+        <Route path='/preferences' element={<Preference/>}/>
+        <Route path='/sucessful-auth' element={<SuccessAuth/>}/>
       </Routes>
     </BrowserRouter>
   )
