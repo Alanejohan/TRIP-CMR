@@ -1,9 +1,9 @@
 import React from 'react'
 import './primary-button.css'
 
-const PrimaryButton = ({label, className}) => {
+const PrimaryButton = ({label, className,type}) => {
     return (
-        <button className= {[`primary-button`, className].join(" ")}>
+        <button className= {[`primary-button`, className].join(" ")} type={type}>
             {label}
         </button>
     )

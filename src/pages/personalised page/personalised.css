@@ -1,0 +1,17 @@
+.personalised-detail{
+    display: flex;
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    
+}
+.personalised-main-header{
+    font-size: 4rem;
+    margin: 0px;
+    padding: 0px;
+}
+
+.personalised-title-desc{
+    font-size: 0.75rem;
+    font-weight: 400;
+}

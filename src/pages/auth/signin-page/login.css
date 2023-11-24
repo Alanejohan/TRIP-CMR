@@ -184,10 +184,12 @@
         background-image: url("/public/assets/images/auth-image.png");
         
     } 
-    .input-content {
-        gap: 24vh;
+    .gap-login{
+        gap: 16vh !important;
     }
+    
 }
+
 
 .auth-img-text {
     display: flex;
@@ -205,4 +207,8 @@
 .auth-img-text p {
     text-align: center;
     color: white;
+}
+
+.gap-login{
+    gap: 16vh !important;
 }

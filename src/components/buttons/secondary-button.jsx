@@ -1,9 +1,9 @@
 import React from 'react'
 import './secondary-button.css'
 
-const SecondaryButton = ({label, className}) => {
+const SecondaryButton = ({label, className,type}) => {
     return (
-        <button className= {[`secondary-button`, className].join(" ")}>
+        <button className= {[`secondary-button`, className].join(" ")} type={type}>
             {label}
         </button>
     )

@@ -1,5 +1,6 @@
 .card-link{
     text-decoration: none;
+    cursor: pointer;
 }
 .simple-card-img{
     width: 100%;

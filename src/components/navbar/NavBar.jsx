@@ -21,10 +21,7 @@ const Navbar = () => {
                             <Link className='header-link' to={'/category'}>Categories</Link> 
                         </li>
                         <li className='single-menu-item'>
-                            <Link className='header-link'>Search</Link>
-                        </li>
-                        <li className='single-menu-item'>
-                            <Link className='header-link'>About us</Link>
+                            <Link className='header-link' to={'/search'}>Search</Link>
                         </li>
                     </ul>
                 </div>
@@ -32,7 +29,7 @@ const Navbar = () => {
                     <Link to={'/login'}>
                         <SecondaryButton  label="Login"/>
                     </Link>
-                    <Link >
+                    <Link to={'/search'}>
                         <PrimaryButton label="Search"/>
                     </Link>
                 </div>

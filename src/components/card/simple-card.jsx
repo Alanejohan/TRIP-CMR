@@ -1,6 +1,6 @@
 import React from 'react'
 import './simple-card.css'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 
 const SimpleCard = ({
     cardlinkS,
@@ -13,10 +13,11 @@ const SimpleCard = ({
     descclassnameS, 
     cattextS, 
     titletextS, 
-    desctextS
+    desctextS, 
+    clickHandler
 }) => {
     return (
-        <Link to={"/"} className= {[`card-link`, cardlinkS].join(" ")}>
+        <div onClick={clickHandler} className= {[`card-link`, cardlinkS].join(" ")}>
             <div className= {[`simple-card-container`, cardcontainerS].join(" ")}>
                 <img className= {[`simple-card-img`, imgclassnameS].join(" ")} src={imglinkS} alt="hero section background"/>
                 <div className= {[`simple-description-container`, descriptioncontainerS].join(" ")} >
@@ -26,7 +27,7 @@ const SimpleCard = ({
                 </div>
             </div>
             
-        </Link>
+        </div>
     )
 }
 

@@ -1,0 +1,19 @@
+.product-detail-page-container{
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.5rem 7rem;
+}
+
+.product-page-container{
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 1rem;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.single-product-detail{
+    width: 48%
+}

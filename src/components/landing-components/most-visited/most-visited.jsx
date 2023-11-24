@@ -8,18 +8,18 @@ const MostVisited = () => {
             <div className="most-visited-content">
                 <div className="main-title-desc">
                     <h2 className="main-header">Most Visited Places in Buea</h2>
-                    <p className="header-detail">Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna. </p>
+                    <p className="header-detail">Buea, located in the Southwest region of Cameroon, offers several attractions that attract visitors from near and far.  </p>
                 </div>
                 
                 <div className="most-visited-list">
                     < AdvancedCard 
                         
                         cardlinkA="w-50"
-                        imglinkA="assets/images/restaurant-table.png"
+                        imglinkA="assets/images/image 6.png"
                         imgclassnameA="h-70"
-                        cattextA = "Restaurant"  
-                        titletextA = "Network Restaurant & Lounge"  
-                        desctextA = "Lorem ipsum dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna.  m dolor sit amet consectetur adipiscing elit Ut et massa mi. Aliquam in hendrerit urna."
+                        cattextA = "Hotel"  
+                        titletextA = "Parlaimentarian Hotel"  
+                        desctextA = "luxury and cozy environment"
                         
                     />
                     <SimpleCard

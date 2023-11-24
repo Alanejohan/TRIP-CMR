@@ -13,7 +13,7 @@ const Login = () => {
     return (
         <div className='login-container'>
             <div className="login-content">
-                <div className="input-content">
+                <div className="input-content gap-login">
                     <div className="logo">
                         <Link to={'/'}>
                             <img src="assets/logo/logo.svg" alt="images in react" />
@@ -46,7 +46,7 @@ const Login = () => {
                                 <label for="option1">Remember me</label>
                             </div>
                             <div className="auth-buttons">
-                                <Link className="full-width">
+                                <Link className="full-width" to={'/preferences'}>
                                     <PrimaryButton className="full-width" label="Login to account" />
                                 </Link>
                                 <p>Don't have an account yet?<Link className='text-btn' to={'/register'}> Sign up </Link></p>

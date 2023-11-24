@@ -7,6 +7,9 @@ import Login from './pages/auth/signin-page/login';
 import Register from './pages/auth/signup-page/register';
 import Preference from './pages/auth/preference-page/preference';
 import SuccessAuth from './pages/auth/success-page/sucess-auth';
+import SearchResult from './pages/search result/search-result';
+import ProductDetail from './pages/details/Details';
+import PersonalizedRec from './pages/personalised page/personalised';
 
 //import logo from "./logo192.png"
 
@@ -23,6 +26,9 @@ function App() {
         <Route path='/register' element={<Register/>}/>
         <Route path='/preferences' element={<Preference/>}/>
         <Route path='/sucessful-auth' element={<SuccessAuth/>}/>
+        <Route path='/search' element={<SearchResult/>}/>
+        <Route path='/product-detail' element={<ProductDetail/>}/>
+        <Route path='/personalised' element={<PersonalizedRec/>} />
       </Routes>
     </BrowserRouter>
   )

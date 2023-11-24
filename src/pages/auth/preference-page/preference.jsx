@@ -26,23 +26,23 @@ const Preference = () => {
                             <div className="preference-list">
                                 <div className="preference-row">
                                     <PreferenceTab className="active" label="Hotel" />
-                                    <PreferenceTab className="active" label="Hotel" />
+                                    <PreferenceTab className="active" label="university" />
                                 </div>
                                 <div className="preference-row">
-                                    <PreferenceTab className="active" label="Hotel" />
-                                    <PreferenceTab className="active" label="Hotel" />
+                                    <PreferenceTab className="active" label="restaurant" />
+                                    <PreferenceTab className="active" label="bar" />
                                 </div>
                                 <div className="preference-row">
-                                    <PreferenceTab className="active" label="Hotel" />
-                                    <PreferenceTab className="active" label="Hotel" />
+                                    <PreferenceTab className="active" label="Tourist" />
+                                    <PreferenceTab className="active" label="Hospital" />
                                 </div>
                                 <div className="preference-row">
-                                    <PreferenceTab className="active" label="Hotel" />
-                                    <PreferenceTab className="active" label="Hotel" />
+                                    <PreferenceTab className="active" label="School" />
+                                    <PreferenceTab className="active" label="Shop" />
                                 </div>
                                 <div className="preference-row">
-                                    <PreferenceTab className="active" label="Hotel" />
-                                    <PreferenceTab className="active" label="Hotel" />
+                                    <PreferenceTab className="active" label="Bistro" />
+                                    <PreferenceTab className="active" label="Snack" />
                                 </div>
                             </div>
 

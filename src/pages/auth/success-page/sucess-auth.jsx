@@ -23,7 +23,7 @@ const SuccessAuth = () => {
                         </div>
                         <div className="inputsuccesss">
                             <div className="auth-buttons">
-                                <Link className="full-width">
+                                <Link className="full-width" to={'/personalised'}>
                                     <PrimaryButton className="full-width" label="Dashbaord" />
                                 </Link>
                                 <p>Already have an account? <Link className='text-btn' to={'/login'}> Sign in </Link></p>
