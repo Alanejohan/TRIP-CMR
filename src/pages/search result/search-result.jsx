@@ -9,17 +9,8 @@ import { categoryData } from '../../components/landing-components/category/hello
 import axios from 'axios';
 
 import './search-result.css';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, LoadScript, Marker } from '@react-google-maps/api';
 
-const containerStyle = {
-  width: '400px',
-  height: '400px'
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
 
 
 
@@ -28,6 +19,8 @@ const SearchResult = () => {
     const location = useLocation();
 
     const navigate = useNavigate()
+
+    const [locations, setLocations] = useState({ lat: 0, lng: 0 });
 
     const { description, category } = location.state || { description: "", category: "" };
 
@@ -105,30 +98,30 @@ const SearchResult = () => {
     }, [categoryData, descriptionData]);
 
 
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: "YOUR_API_KEY"
-        // AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg
-        // AIzaSyBXFAxSgXP7b5D25WEtjxkYqoWM2PjxaLg
-        // https://codepen.io/waterswv/pen/rKzrvo
-        // https://preview.codecanyon.net/item/ev-hub-charging-station-booking-react-admin-ui-dashboard-web-app-template/full_screen_preview/49171856?_ga=2.139523509.74765813.1701300475-1303799048.1670612067
-        // https://codepen.io/waterswv/pen/rKzrvo
-        // https://6ammart-admin.6amtech.com/admin/store/add
-      })
+    // const { isLoaded } = useJsApiLoader({
+    //     id: 'google-map-script',
+    //     googleMapsApiKey: "AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg"
+    //     // AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg
+    //     // AIzaSyBXFAxSgXP7b5D25WEtjxkYqoWM2PjxaLg
+    //     // https://codepen.io/waterswv/pen/rKzrvo
+    //     // https://preview.codecanyon.net/item/ev-hub-charging-station-booking-react-admin-ui-dashboard-web-app-template/full_screen_preview/49171856?_ga=2.139523509.74765813.1701300475-1303799048.1670612067
+    //     // https://codepen.io/waterswv/pen/rKzrvo
+    //     // https://6ammart-admin.6amtech.com/admin/store/add
+    //   })
 
-      const [map, setMap] = React.useState(null)
+    //   const [map, setMap] = React.useState(null)
 
-    const onLoad = React.useCallback(function callback(map) {
-        // This is just an example of getting and using the map instance!!! don't just blindly copy!
-        const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
+    // const onLoad = React.useCallback(function callback(map) {
+    //     // This is just an example of getting and using the map instance!!! don't just blindly copy!
+    //     const bounds = new window.google.maps.LatLngBounds(center);
+    //     map.fitBounds(bounds);
 
-        setMap(map)
-    }, [])
+    //     setMap(map)
+    // }, [])
 
-    const onUnmount = React.useCallback(function callback(map) {
-        setMap(null)
-    }, [])
+    // const onUnmount = React.useCallback(function callback(map) {
+    //     setMap(null)
+    // }, [])
 
     return (
         <div>
@@ -192,18 +185,15 @@ const SearchResult = () => {
                     <div className="map">
 
                         {/* <img className="google-maps-image" src="assets/images/maps-image.png" alt="hero section background" /> */}
-                        isLoaded ? (
+                        <LoadScript googleMapsApiKey="AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg">
                             <GoogleMap
-                                mapContainerStyle={containerStyle}
-                                center={center}
+                                mapContainerStyle={{ width: '550px', height: '600px' }}
+                                center={location}
                                 zoom={10}
-                                onLoad={onLoad}
-                                onUnmount={onUnmount}
                             >
-
-                                <></>
+                                <Marker position={locations} />
                             </GoogleMap>
-                        ) : <div></div>
+                        </LoadScript>
                     </div>
                 </div>
             </div>

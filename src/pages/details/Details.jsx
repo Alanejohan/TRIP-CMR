@@ -4,39 +4,25 @@ import Navbar from '../../components/navbar/NavBar';
 import Footer from '../../components/footer/footer';
 import ProductDetails from '../../components/product-details/product-details';
 
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, LoadScript, Marker } from '@react-google-maps/api';
 
-const containerStyle = {
-  width: '400px',
-  height: '400px'
-};
 
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
 
 
 const ProductDetail = () => {
 
-    const { isLoaded } = useJsApiLoader({
-        id: 'google-map-script',
-        googleMapsApiKey: "YOUR_API_KEY"
-      })
 
-      const [map, setMap] = React.useState(null)
+    const placeId = 'YOUR_BUSINESS_PLACE_ID';
+    const locations = { lat: 0, lng: 0 }
 
-    const onLoad = React.useCallback(function callback(map) {
-        // This is just an example of getting and using the map instance!!! don't just blindly copy!
-        const bounds = new window.google.maps.LatLngBounds(center);
-        map.fitBounds(bounds);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //     const result = await axios('YOUR_API_URL');
+    //     setLocation(result.data); // assuming the API returns an object with lat and lng properties
+    //     };
 
-        setMap(map)
-    }, [])
-
-    const onUnmount = React.useCallback(function callback(map) {
-        setMap(null)
-    }, [])
+    //     fetchData();
+    // }, []);
 
     return (
         <div>
@@ -47,19 +33,16 @@ const ProductDetail = () => {
                         <ProductDetails />
                     </div>
                     <div className="map">
-                        {/* <img className="google-maps-image" src="assets/images/maps-image.png" alt="hero section background" /> */}
-                        isLoaded ? (
+                        <LoadScript googleMapsApiKey="AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg">
                             <GoogleMap
-                                mapContainerStyle={containerStyle}
-                                center={center}
+                                mapContainerStyle={{ width: '550px', height: '600px' }}
+                                center={location}
                                 zoom={10}
-                                onLoad={onLoad}
-                                onUnmount={onUnmount}
+                                options={{ placeIdOnly: true }}
                             >
-                                { /* Child components, such as markers, info windows, etc. */ }
-                                <></>
+                                <Marker position={locations} placeId={placeId} />
                             </GoogleMap>
-                        ) : <div></div>
+                        </LoadScript>
                     </div>
                 </div>
             </div>
