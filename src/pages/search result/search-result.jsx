@@ -9,17 +9,9 @@ import { categoryData } from '../../components/landing-components/category/hello
 import axios from 'axios';
 
 import './search-result.css';
-import { GoogleMap, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, useJsApiLoader, LoadScript, Marker } from '@react-google-maps/api';
+import { async } from 'q';
 
-const containerStyle = {
-  width: '400px',
-  height: '400px'
-};
-
-const center = {
-  lat: -3.745,
-  lng: -38.523
-};
 
 
 
@@ -29,7 +21,8 @@ const SearchResult = () => {
 
     const navigate = useNavigate()
 
-    const [locations, setLocations] = useState({ lat: 0, lng: 0 });
+    const [locations, setLocations] = useState([]);
+    const [BusinessIds, setBusinessIds] = useState([]);
 
     const { description, category } = location.state || { description: "", category: "" };
 
@@ -95,6 +88,11 @@ const SearchResult = () => {
             console.log(responseData);
             setRecommendations(responseData);
 
+            const placeIds = [responseData[0]['Business Id']] 
+            const BusinessIds = [responseData[0]['Business Id']];
+            // const BusinessIds = responseData.map(item => item['Business Id']);
+            setBusinessIds(BusinessIds);
+
 
         } catch (error) {
             console.error("Error fetching recommendations:", error);
@@ -107,17 +105,23 @@ const SearchResult = () => {
     }, [categoryData, descriptionData]);
 
 
-    // const { isLoaded } = useJsApiLoader({
-    //     id: 'google-map-script',
-    //     googleMapsApiKey: "YOUR_API_KEY"
-    //     // AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg
-    //     // AIzaSyBXFAxSgXP7b5D25WEtjxkYqoWM2PjxaLg
-    //     // https://codepen.io/waterswv/pen/rKzrvo
-    //     // https://preview.codecanyon.net/item/ev-hub-charging-station-booking-react-admin-ui-dashboard-web-app-template/full_screen_preview/49171856?_ga=2.139523509.74765813.1701300475-1303799048.1670612067
-    //     // https://codepen.io/waterswv/pen/rKzrvo
-    //     // https://6ammart-admin.6amtech.com/admin/store/add
-    //   })
+    // useEffect(()=> {
+    //     console.log('test');
+    //     const fetchBusinessIds = async () => {
 
+    //         const locations = await Promise.all(BusinessIds.map(async (BusinessId) => {
+    //             const res = await axios.get({url: "https://maps.googleapis.com/maps/api/business/details/json?business_id=${BusinessId}&key=AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg"});
+    //             const resData = await res.json();
+    //             console.log(resData);
+    //             console.log('me')
+    //             return resData.result.geometry.location;
+    //         }));
+    //         setLocations(locations);
+    //     };
+    // }, []);
+
+
+    const googleMapsApiKey = 'AIzaSyBXFAxSgXP7b5D25WEtjxkYqoWM2PjxaLg';
 
     return (
         <div>
@@ -181,14 +185,33 @@ const SearchResult = () => {
                     <div className="map">
 
                         {/* <img className="google-maps-image" src="assets/images/maps-image.png" alt="hero section background" /> */}
-                        <LoadScript googleMapsApiKey="AIzaSyBXFAxSgXP7b5D25WEtjxkYqoWM2PjxaLg">
+                        {/* <LoadScript googleMapsApiKey="AIzaSyDpnPABucZMh7qM-9atmn4w4Ojc67F9qFg">
                             <GoogleMap
                                 mapContainerStyle={{ width: '600px', height: '600px' }}
-                                center={locations[0]} // Center the map on the first location
+                                center={{lat:0, lng: 0}} // Center the map on the first location
                                 zoom={10}
+                                options={{BusinessIdOnly: true}}
                             >
-                                {locations.map((location, index) => (
+                                 {locations.map((location, index) => (
                                 <Marker key={index} position={location} />
+                                ))} //comment
+                                <Marker position={{lat:0, lng: 0}} BusinessId={{0x1061318d288222db:0xd42344046a4cae82}}  />//comment
+                                {BusinessIds.map((BusinessId, index) => (
+                                <Marker key={index} BusinessId={location}  location={{lat:26, lng: 89}} />
+                                ))}
+                            </GoogleMap>
+                        </LoadScript> */}
+                        <LoadScript googleMapsApiKey={googleMapsApiKey}>
+                            <GoogleMap
+                                mapContainerStyle={{ width: '100%', height: '400px' }} // Adjust as needed
+                                center={{ lat: 0, lng: 0 }} // Set to the desired initial center coordinates
+                                zoom={10} // Set to the desired initial zoom level
+                            >
+                                {BusinessIds.map((businessId, index) => (
+                                <Marker
+                                    key={index}
+                                    position={{ lat: businessId.lat, lng: businessId.lng }} // Replace with the actual latitude and longitude values
+                                />
                                 ))}
                             </GoogleMap>
                         </LoadScript>
